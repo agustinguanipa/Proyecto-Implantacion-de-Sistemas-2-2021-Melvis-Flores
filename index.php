@@ -111,18 +111,19 @@
   <!--Main Navigation-->
 
   <!--Main Layout-->
+  <div class="jumbotron text-white jumbotron-image shadow jumbo-section-index">
+      <p class="jumbo-title">
+        Consejo Comunal Comunidad 12 de Octubre
+      </p>
+      <div class="jumbo-content">
+        <p class="card-text text-white"><b>Comunidad 12 de Octubre Naranjales, Municipio Fernández Feo, Estado Táchira</b></p>
+        <p class="text-white">Información sobre la Comunidad, Acontecimientos, Eventos, Jornadas, entre otros.</p>
+        <a href="paginas/principal_comunidad.php" class="btn btn-light btn-lg"> <b>¿Quíenes Somos? </b><i class="fas fa-users ml-2"></i></a>
+      </div>
+  </div>
+  
   <main class="mt-5 pt-5">
     <div class="container justify-content-center">
-      <!--Section: Jumbotron-->
-      <div class="card" align="center">
-        <div class="card-body index-background">
-          <h2 class="card-title text-white"><b>Consejo Comunal Comunidad 12 de Octubre</b></h2>
-          <p class="card-text text-white"><b>Comunidad de Comunidad 12 de Octubre Naranjales, Municipio Fernández Feo, Estado Táchira</b></p>
-          <p class="text-white">Información sobre la Comunidad, Acontecimientos, Eventos, Jornadas, entre otros.</p>
-          <a href="paginas/principal_comunidad.php" class="btn btn-light btn-lg"> <b>¿Quíenes Somos? </b><i class="fas fa-users ml-2"></i></a>
-        </div>
-      </div>
-      <!--Section: Jumbotron-->
       <p class="">
       <h2 align="center"><b>Noticias</b></h2>
       <hr class="my-3">
