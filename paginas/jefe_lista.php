@@ -14,7 +14,7 @@
 	    <div class="table-title">
 	        <div class="row">
             <div class="col-sm-6">
-							<h2>Administrar <b>Jefes de Familia</b></h2>
+							<h2><b>Jefes de Familia</b></h2>
 						</div>
 						<div class="col-sm-6">
 							<a href="jefe_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Jefes de Familia Activos</a>

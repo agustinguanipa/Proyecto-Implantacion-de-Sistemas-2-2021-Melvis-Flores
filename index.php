@@ -56,7 +56,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="index.php">
-          <img src="imagen/logo-cc.png" height="30" alt="Logo CC">
+          <img src="imagen/logo-cc12o.png" height="30" alt="Logo CC">
         </a>
         <!-- Collapse -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

@@ -177,3 +177,29 @@ background: linear-gradient(90deg, rgba(255,207,148,1) 0%, rgba(233,160,75,1) 51
   margin-bottom: 0px;
 }
 
+.jumbotron-admin-panel1 {
+  background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(0, 117, 252, 0.73)),
+    url("../imagen/panel-1.jpg");
+  background-size: cover;
+  min-height: fit-content;
+  color: white;
+}
+
+.jumbotron-admin-panel2 {
+  background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(111, 252, 165, 0.73)),
+    url("../imagen/panel-3.jpg");
+  background-size: cover;
+  min-height: fit-content;
+  color: white;
+}
+
+.jumbotron-admin-panel3 {
+  background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(241, 80, 59, 0.73)),
+    url("../imagen/panelad-1.png");
+  background-size: cover;
+  min-height: fit-content;
+  color: white;
+}

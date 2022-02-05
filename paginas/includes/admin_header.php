@@ -66,14 +66,14 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading" align="center">
         <a href="admin_panel.php" style="text-decoration: none;">
-          <img src="../imagen/logo-cc-color.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          <span class="menu-collapsed" style="color: #000000; font-size: 14px;"><b>Panel de Control</b></span>
+          <img src="../imagen/logo-cc12o.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <span class="menu-collapsed" style="color: #000000; font-size: 14px;"><b>Sistema de Gestión</b></span>
         </a>
       </div>
       <div class="list-group list-group-flush">
         <ul class="list-group">
           <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed justify-content-center">
-              <small>Menu Principal</small>
+              <small>Comunidad 12 de Octubre</small>
           </li>
           <!-- Menu -->
           <a href="admin_panel.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
@@ -107,7 +107,7 @@
           <a href="registro_lista.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
             <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-table fa-fw mr-3"></span> 
-                <span class="menu-collapsed">Eventos</span>
+                <span class="menu-collapsed">COVID-19</span>
             </div>
           </a>
           <a href="admin_configuracion.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">

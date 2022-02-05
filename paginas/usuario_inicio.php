@@ -88,7 +88,7 @@ if (!empty($_SESSION['active'])) {
         <div class="col-sm-12">
           <div class="brand-wrap">
             <a href="../index.php" style="color: #000000; text-decoration: none;">
-              <img class="logo" src="../imagen/logo-cc-color.png">
+              <img class="logo" src="../imagen/logo-cc12o.png">
               <h2 class="logo-text"><b>Consejo Comunal Comunidad 12 de Octubre</b></h2>
             </a>
           </div>
