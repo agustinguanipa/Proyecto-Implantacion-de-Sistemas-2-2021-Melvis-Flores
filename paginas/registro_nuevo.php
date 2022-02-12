@@ -13,38 +13,46 @@
   <div class="form-group text-center">
     <div class="card">
       <div class="card-header">
-        <b>Nuevo Evento</b>
+        <b>Nuevo Caso</b>
       </div>
       <div class="card-body">
         <form role="form" id="registro_nuevo" class="justify-content-center mx- my-1" align="center" enctype="multipart/form-data" action="../ajax/guardar_registro.php" method="post">
           <div class="form-row">
-            <div class="col form-group col-lg-8">
-              <label class="form-label" for="nombr_reg"><b>Nombre: </b></label>
-              <input type="text" class="form-control" name="nombr_reg" autocomplete="off" id="nombr_reg"  maxlength="100" onkeyup="this.value = this.value.toUpperCase();" placeholder="Jornada, CLAP, Gas y otros" required>
+            <div class="col form-group">
+                <label class="form-label" for="ident_jef"><b>Persona: </b></label>
+                <?php 
+                  $query_jef = mysqli_query($conexion,"SELECT * FROM tab_jef");
+                  $result_jef = mysqli_num_rows($query_jef);
+                ?>
+                <select class="form-control" name="ident_jef" id="ident_jef">
+                  <option disabled selected value>Seleccionar una Opción...</option>
+                  <?php 
+                    if ($result_jef > 0) {
+                    while ($jef = mysqli_fetch_array($query_jef)) {?>
+                    <option value="<?php echo $jef['ident_jef'];?>"><?php echo $jef['ident_jef'];?> - <?php echo $jef['nombr_jef'];?> <?php echo $jef['apeli_jef'];?></option>
+                  <?php
+                  }
+                  }
+                  ?>
+                </select>
             </div>
             <div class="col form-group col-lg-4">
-              <label class="form-label" for="fecre_reg"><b>Fecha del Evento: </b></label>
+              <label class="form-label" for="fecre_reg"><b>Fecha de Aparición de Síntomas: </b></label>
               <input type="date" class="form-control" name="fecre_reg" autocomplete="off" id="fecre_reg" placeholder="">
             </div>
           </div>
           <div class="form-row">
             <div class="col form-group">
-              <label class="form-label" for="descr_reg"><b>Descripción: </b></label>
-              <input type="text" class="form-control" name="descr_reg" autocomplete="off" id="descr_reg" maxlength="100" onkeyup="this.value = this.value.toUpperCase();" placeholder="Lugar, Calle o Sitio" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col form-group">
-              <label class="form-label" for="ident_jef"><b>Familias: </b></label>
+              <label class="form-label" for="ident_sin"><b>Síntomas: </b></label>
               <?php 
-                $query_jef = mysqli_query($conexion,"SELECT * FROM tab_jef");
-                $result_jef = mysqli_num_rows($query_jef);
+                $query_sin = mysqli_query($conexion,"SELECT * FROM tab_sim");
+                $result_sin = mysqli_num_rows($query_sin);
               ?>
-              <select class="selectpicker" id="ident_jef[]" name="ident_jef[]" multiple data-live-search="true">
+              <select class="selectpicker" id="ident_sin[]" name="ident_sin[]" multiple data-live-search="true">
                 <?php 
-                  if ($result_jef > 0) {
-                  while ($jef = mysqli_fetch_array($query_jef)) {?>
-                  <option value="<?php echo $jef['ident_jef'];?>"><?php echo $jef['ident_jef'];?> - <?php echo $jef['cedul_jef'];?> - <?php echo $jef['nombr_jef'];?> <?php echo $jef['apeli_jef'];?></option>
+                  if ($result_sin > 0) {
+                  while ($sin = mysqli_fetch_array($query_sin)) {?>
+                  <option value="<?php echo $sin['ident_sin'];?>"><?php echo $sin['sin1_sin'];?></option>
                 <?php
                 }
                 }
@@ -54,7 +62,13 @@
           </div>
           <div class="form-row">
             <div class="col form-group">
-              <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-save"></i> Guardar Evento</button>
+              <label class="form-label" for="obser_reg"><b>Observación: </b></label>
+              <input type="text" class="form-control" name="obser_reg" autocomplete="off" id="obser_reg" maxlength="100" onkeyup="this.value = this.value.toUpperCase();" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col form-group">
+              <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-save"></i> Guardar Registro</button>
               <button type="reset" class="btn btn-light btn-block"><i class="fa fa-undo"></i> Limpiar</button>
             </div>
           </div> 
@@ -77,7 +91,7 @@
         required: true,
         minlength: 6
       },
-      descr_reg: {
+      obser_reg: {
         required: true,
         minlength: 6
       },
@@ -94,7 +108,7 @@
         required: "Ingrese un Nombre",
         minlength: "El Nombre debe contener al menos 6 caracteres"
       },
-      descr_reg: {
+      obser_reg: {
         required: "Ingrese una Descripción",
         minlength: "La Descripcion debe contener al menos 6 caracteres"
       },

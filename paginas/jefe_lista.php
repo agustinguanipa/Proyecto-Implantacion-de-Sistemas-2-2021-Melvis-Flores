@@ -14,11 +14,11 @@
 	    <div class="table-title">
 	        <div class="row">
             <div class="col-sm-6">
-							<h2><b>Jefes de Familia</b></h2>
+							<h2><b>Comunidad | Personas</b></h2>
 						</div>
 						<div class="col-sm-6">
-							<a href="jefe_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Jefes de Familia Activos</a>
-							<a href="jefe_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Jefes de Familia Inactivos</a>
+							<!-- <a href="jefe_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Personas Activas</a>
+							<a href="jefe_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Personas Inactivas</a> -->
 						</div>
 	        </div>
 	    </div>
@@ -27,9 +27,9 @@
 	    		<?php  
 						if ($data['nombr_tip'] != 'ADMINISTRADOR' && ($_SESSION['ident_tip'] == 1 || $_SESSION['ident_tip'] == 2)) {
 						?>
-							<a href="jefe_registro.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar Jefe de Familia</a>
-							<a href="listas/generaListaJefes.php" class="btn btn-info float-left mx-2" target="_blank"><i class="fa fa-print"></i> Exportar a PDF</a>
-							<a href="listas/csvlistaJefes.php" class="btn btn-info float-left" target="_blank"><i class="fa fa-file-excel"></i> Exportar a CSV</a>
+							<a href="jefe_registro.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar Persona</a>
+							<!-- <a href="listas/generaListaJefes.php" class="btn btn-info float-left mx-2" target="_blank"><i class="fa fa-print"></i> Exportar a PDF</a>
+							<a href="listas/csvlistaJefes.php" class="btn btn-info float-left" target="_blank"><i class="fa fa-file-excel"></i> Exportar a CSV</a> -->
 							<!--
 							<div class="dropdown show">
 							  <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-print"></i> Generar PDF</a>
@@ -90,7 +90,7 @@
 							$desde = ($pagina-1) * $por_pagina;
 							$total_paginas = ceil($total_registro / $por_pagina);
 
-							$query = mysqli_query($conexion,"SELECT u.ident_jef, u.cedul_jef,u.nombr_jef, u.apeli_jef, u.telem_jef, u.usuar_jef, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE statu_jef = 1 AND ident_jef != 1 ORDER BY ident_tip ASC LIMIT $desde,$por_pagina");
+							$query = mysqli_query($conexion,"SELECT u.ident_jef, u.cedul_jef,u.nombr_jef, u.apeli_jef, u.telem_jef, u.usuar_jef, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE statu_jef = 1 ORDER BY ident_tip ASC LIMIT $desde,$por_pagina");
 							mysqli_close($conexion);
 							$result = mysqli_num_rows($query);
 

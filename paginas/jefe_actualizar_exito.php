@@ -13,10 +13,10 @@
   <div class="form-group text-center">
     <div class="card">
     	<div class="card-header">
-			    <b>Actualizar Jefe de Familia</b>
+			    <b>Actualizar Persona</b>
 			  </div>
 		   	<div class="card-body">
-  				<h2><b>¡El Jefe de Familia ha sido Actualizado Exitosamente!</b></h2>
+  				<h2><b>¡Los Datos de la Persona han sido Actualizados Exitosamente!</b></h2>
 				</div>
 				<div class="card-footer">
            <a href="jefe_lista.php" class="btn btn-info float-right">Ir al Listado <i class="fa fa-arrow-right"></i></a> 

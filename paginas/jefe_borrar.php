@@ -26,7 +26,7 @@ $data = mysqli_fetch_array($query_user);
   <div class="form-group text-center">
     <div class="card">
     	<div class="card-header">
-			    <b>Eliminar Jefe de Familia</b>
+			    <b>Eliminar Persona</b>
 			  </div>
 		   	<div class="card-body">
   				<form role="form" id="jefe_borrar" class="justify-content-center mx-3 my-1" align="center" enctype="" action="jefe_proceso_eliminar.php" method="post">
@@ -48,7 +48,7 @@ $data = mysqli_fetch_array($query_user);
 					  </div>
 		        <div class="form-row">
 		          <div class="col form-group">
-		            <button type="submit" id="" class="btn btn-danger btn-block"><i class="fa fa-trash"></i> Eliminar Jefe de Familia</button>
+		            <button type="submit" id="" class="btn btn-danger btn-block"><i class="fa fa-trash"></i> Eliminar Persona</button>
 		          </div>
 		        </div>
 		      </form>

@@ -20,7 +20,15 @@
         <div class="col-sm-6 form-group">
           <p class="titulo"><b>Consejo Comunal Comunidad 12 de Octubre</b></p>
           <p class="contenido">
-            Esta ubicado en la Parte Alta de la Ciudad de San Cristóbal, en el Sector Pueblo, Parroquia San Juan Bautista. Tiene una población aproximada de 500 familias que son atendidas por el Consejo Comunal.
+          <b>Municipio Fernández Feo.</b>
+          <br><br>
+          En lo político territorial desde el año 1944 El Piñal es integrante del distrito Uribante. En 1995 es declarado parroquia y para el año 1986 se convierte en Municipio autónomo del Estado Táchira.
+          <br><br>
+          El Municipio Fernández Feo, es uno de los 29 municipios que conforman al Estado Táchira de Venezuela. Su capital es San Rafael del Piñal. Fundado el 11 de febrero de 1962 por el Obispo Monseñor Fernández Feo y Don Renato Laporta.
+          <br><br>
+          <b>Ubicación Política.</b>
+          <br><br>
+          El Municipio Fernández Feo se encuentra ubicado políticamente al Sur del Estado Táchira, a 53 Km. de distancia de la ciudad de San Cristóbal y a 763 Km. de distancia a Caracas capital de la República.
           </p>
         </div>
       </div>

@@ -63,57 +63,47 @@
 
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="bg-dark border-right text-white" id="sidebar-wrapper">
       <div class="sidebar-heading" align="center">
         <a href="admin_panel.php" style="text-decoration: none;">
           <img src="../imagen/logo-cc12o.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          <span class="menu-collapsed" style="color: #000000; font-size: 14px;"><b>Sistema de Gestión</b></span>
+          <span class="menu-collapsed" style="color: #FFF; font-size: 14px;"><b>Sistema de Gestión</b></span>
         </a>
       </div>
       <div class="list-group list-group-flush">
         <ul class="list-group">
-          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed justify-content-center">
-              <small>Comunidad 12 de Octubre</small>
+          <li class="bg-dark text-light list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed justify-content-center">
+              <small class="text-white">Comunidad 12 de Octubre</small>
           </li>
           <!-- Menu -->
-          <a href="admin_panel.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
+          <a href="admin_panel.php" aria-expanded="false" class="bg-dark text-light list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
             <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-home fa-fw mr-3"></span> 
                 <span class="menu-collapsed">Inicio</span>
             </div>
           </a>
-          <a href="noticia_lista.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
+          <a href="noticia_lista.php" aria-expanded="false" class="bg-dark text-light list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
             <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-newspaper fa-fw mr-3"></span> 
                 <span class="menu-collapsed">Noticias</span>
             </div>
           </a>
-          <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
-              <div class="d-flex w-100 justify-content-start align-items-center">
+          <a href="jefe_lista.php" aria-expanded="false" class="bg-dark text-light list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
+            <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-users fa-fw mr-3"></span> 
                 <span class="menu-collapsed">Comunidad</span>
-                <span class="fa fa-caret-down ml-auto"></span>
-              </div>
-          </a>
-            <!-- Submenu -->
-            <div id='submenu1' class="collapse sidebar-submenu">
-              <a href="jefe_lista.php" class="list-group-item list-group-item-action bg-light text-dark">
-                <span class="menu-collapsed">Jefes de Familia</span>
-              </a>
-              <a href="persona_lista.php" class="list-group-item list-group-item-action bg-light text-dark">
-                <span class="menu-collapsed">Personas</span>
-              </a>
             </div>
-          <a href="registro_lista.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
+          </a>
+          <a href="registro_lista.php" aria-expanded="false" class="bg-dark text-light list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
             <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-table fa-fw mr-3"></span> 
                 <span class="menu-collapsed">COVID-19</span>
             </div>
           </a>
-          <a href="admin_configuracion.php" aria-expanded="false" class="bg-light text-dark list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
+          <a href="admin_configuracion.php" aria-expanded="false" class="bg-dark text-light list-group-item list-group-item-action flex-column align-items-start tamano-elemento-sidebar">
             <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-cogs fa-fw mr-3"></span> 
-                <span class="menu-collapsed">Configuración</span>
+                <span class="menu-collapsed">Ajustes</span>
             </div>
           </a>
         </ul>
@@ -132,7 +122,7 @@
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <?php  if (isset($_SESSION['active'])) : ?>
               <li class="nav-item active">
-                <a class="nav-link" style="color: #FFFFFF;">San Cristobal, <?php echo fechaC(); ?></a>
+                <a class="nav-link" style="color: #FFFFFF;">Hoy es <?php echo fechaC(); ?></a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="../index.php" style="color: #FFFFFF;"><i class="fa fa-home"></i> Bienvenido <?php echo $_SESSION['nombr_jef']; ?> <?php echo $_SESSION['apeli_jef']; ?></a>

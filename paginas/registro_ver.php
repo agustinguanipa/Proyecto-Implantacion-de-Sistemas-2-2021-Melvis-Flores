@@ -54,7 +54,7 @@ mysqli_close($conexion);
 <div class="container col-lg-10">
 	<div class="card text-center">
 	  <div class="card-header">
-	    <b>Ver Evento</b>
+	    <b>Ver Caso</b>
 	  </div>
 		<div class="card-body" class="justify-content-center mx-3 my-1">
 		  <div class="form-row">
@@ -67,23 +67,23 @@ mysqli_close($conexion);
 		      <label><?php echo $descr_reg; ?></label>
 		    </div>
 		    <div class="col form-group">
-		      <label class="form-label" for="fecre_reg"><b>Fecha del Evento: </b></label>
+		      <label class="form-label" for="fecre_reg"><b>Fecha de la Aparición de Síntomas: </b></label>
 		      <label><?php echo $fecre_reg; ?></label>
 		    </div>
 		  </div>
 		  <hr>
 		  <div class="form-row">
 		  	<div class="col form-group">
-		      <label class="form-label" for="ident_jef"><b>Jefes de Familia Beneficiados: </b></label><br>
+		      <label class="form-label" for="ident_jef"><b>Síntomas: </b></label><br>
 		      <?php
 		      	include "conexion.php";
-						$query_rol = mysqli_query($conexion,"SELECT * FROM det_reg LEFT JOIN tab_jef USING (ident_jef) WHERE det_reg.ident_jef AND ident_reg = '$id'");
+						$query_rol = mysqli_query($conexion,"SELECT * FROM tab_sim INNER JOIN det_reg USING (ident_sin) WHERE det_reg.ident_reg = '$id'");
 						$result_rol = mysqli_num_rows($query_rol);
 					?>
 					<?php 
 						if ($result_rol > 0) {
 						while ($rol = mysqli_fetch_array($query_rol)) {?>
-		      	<label><?php echo $rol['cedul_jef'];?> - <?php echo $rol['nombr_jef'];?> <?php echo $rol['apeli_jef'];?></label><br>
+		      	<label> - <?php echo $rol['sin1_sin'];?></label><br>
 		      	<?php
 						}
 						}

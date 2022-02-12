@@ -11,14 +11,13 @@
 	$email_jef = $_POST['email_jef'];
 	$calle_jef = $_POST['calle_jef'];
 	$direc_jef = $_POST['direc_jef'];
-	$tibom_jef = $_POST['tibom_jef'];
 	$seria_jef = $_POST['seria_jef'];
 	$usuar_jef = $_POST['usuar_jef'];
 	$contr_jef = md5($_POST['contr_jef']);
 	$statu_jef = 1;
 	$ident_tip = $_POST['ident_tip'];
 
-	$query_insert = mysqli_query($conexion,"INSERT INTO tab_jef(cedul_jef,nombr_jef,apeli_jef,fecna_jef,telem_jef,telec_jef,email_jef,calle_jef,direc_jef,tibom_jef,seria_jef,usuar_jef,contr_jef, statu_jef,ident_tip) VALUES('$cedul_jef','$nombr_jef','$apeli_jef','$fecna_jef','$telem_jef','$telec_jef','$email_jef','$calle_jef','$direc_jef','$tibom_jef','$seria_jef','$usuar_jef','$contr_jef','$statu_jef','$ident_tip')");
+	$query_insert = mysqli_query($conexion,"INSERT INTO tab_jef(cedul_jef,nombr_jef,apeli_jef,fecna_jef,telem_jef,telec_jef,email_jef,calle_jef,direc_jef,seria_jef,usuar_jef,contr_jef, statu_jef,ident_tip) VALUES('$cedul_jef','$nombr_jef','$apeli_jef','$fecna_jef','$telem_jef','$telec_jef','$email_jef','$calle_jef','$direc_jef','$seria_jef','$usuar_jef','$contr_jef','$statu_jef','$ident_tip')");
 
 	header('location: ../paginas/jefe_registro_exito.php');
 ?>

@@ -30,8 +30,7 @@
 				<div class="container mb-0">
 					<h1 class="display-6">Comunidad</h1>
 					<p class="lead">Listado de Personas que integran la Comunidad</p>
-					<a href="jefe_lista.php" class="btn btn-light">Ver Jefes de Familia</a>
-				<a href="persona_lista.php" class="btn btn-light">Ver Personas</a>
+					<a href="jefe_lista.php" class="btn btn-light">Ver Personas</a>
 				</div>
 			</div>
 		</div>
@@ -40,8 +39,8 @@
 				<div class="container mb-0">
 					<h1 class="display-6">COVID-19</h1>
 					<p class="lead">Gestión de Casos</p>
-					<a href="jefe_lista.php" class="btn btn-warning">Ver Casos</a>
-					<a href="persona_lista.php" class="btn btn-warning">Registrar</a>
+					<a href="registro_lista.php" class="btn btn-warning">Ver Casos</a>
+					<a href="registro_nuevo.php" class="btn btn-warning">Registrar</a>
 				</div>
 			</div>
 		</div>

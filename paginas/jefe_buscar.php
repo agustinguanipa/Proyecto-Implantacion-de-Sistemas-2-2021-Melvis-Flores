@@ -20,17 +20,17 @@
 	    <div class="table-title">
 	        <div class="row">
             <div class="col-sm-6">
-							<h2>Administrar <b>Jefes de Familia</b></h2>
+							<h2>Comunidad <b>Personas</b></h2>
 						</div>
 						<div class="col-sm-6">
-							<a href="jefe_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Jefes de Familia Activos</a>
-							<a href="jefe_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Jefes de Familia Inactivos</a>
+							<!-- <a href="jefe_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Jefes de Familia Activos</a>
+							<a href="jefe_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Jefes de Familia Inactivos</a> -->
 						</div>
 	        </div>
 	    </div>
 	    <div class="row" style="padding-top: 2px;">
 	    	<div class="col-sm-8">
-					<a href="jefe_registro.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar Jefe de Familia</a>
+					<a href="jefe_registro.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar Persona</a>
 				</div>
 				<form action="jefe_buscar.php" method="GET" class="col-sm-4" style="padding-top: 1px;">
 					<div class="input-group">			

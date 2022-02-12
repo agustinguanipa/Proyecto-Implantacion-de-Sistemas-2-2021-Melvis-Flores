@@ -17,14 +17,14 @@
 							<h2>Gestión <b>COVID-19</b></h2>
 						</div>
 						<div class="col-sm-6">
-							<a href="registro_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Eventos Activos</a>
-							<a href="registro_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Eventos Inactivos</a>
+							<a href="registro_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Casos Activos</a>
+							<a href="registro_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Casos Inactivos</a>
 						</div>
 	        </div>
 	    </div>
 	    <div class="row" style="padding-top: 2px;">
 	    	<div class="col-sm-8">
-					<a href="registro_nuevo.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Nuevo Evento</a>
+					<a href="registro_nuevo.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Nuevo Caso</a>
 				</div>
 				<form action="registro_buscar.php" method="GET" class="col-sm-4" style="padding-top: 1px;">
 					<div class="input-group">			
@@ -41,12 +41,13 @@
 					<table class="table table-striped table-hover">
 						<tr>
 							<th class='text-center'>#</th>
+							<th class='text-center'>CI</th>
 							<th class='text-center'>Nombre</th>
-							<th class='text-center'>Descripción</th>
+							<th class='text-center'>Observacion</th>
 							<th class='text-center'>Fecha</th>
 							<th class='text-center'>Ver</th>
-							<th class='text-center'>Editar</th>
-							<th class='text-center'>Borrar</th>
+							<!-- <th class='text-center'>Editar</th> -->
+							<th class='text-center'>Desactivar</th>
 						</tr>
 						<?php 
 							
@@ -69,7 +70,7 @@
 							$desde = ($pagina-1) * $por_pagina;
 							$total_paginas = ceil($total_registro / $por_pagina);
 
-							$query = mysqli_query($conexion,"SELECT ident_reg, nombr_reg, descr_reg, fecre_reg FROM tab_reg WHERE statu_reg = 1 ORDER BY ident_reg DESC LIMIT $desde,$por_pagina");
+							$query = mysqli_query($conexion,"SELECT tab_reg.ident_reg, tab_jef.cedul_jef, tab_jef.nombr_jef, tab_jef.apeli_jef, tab_reg.obser_reg, tab_reg.fecre_reg FROM tab_reg INNER JOIN tab_jef ON tab_reg.ident_jef = tab_jef.ident_jef WHERE statu_reg = 1 ORDER BY ident_reg DESC LIMIT $desde,$por_pagina");
 							mysqli_close($conexion);
 							$result = mysqli_num_rows($query);
 
@@ -80,15 +81,16 @@
 
 							 		<tr class="row<?php echo $data['ident_reg']; ?>">
 										<td class='text-center'><?php echo $data['ident_reg']; ?></td>
-										<td class='text-center'><?php echo $data['nombr_reg']; ?></td>
-										<td class='text-center'><?php echo $data['descr_reg']; ?></td>
+										<td class='text-center'><?php echo $data['cedul_jef']; ?></td>
+										<td class='text-center'><?php echo $data['nombr_jef'];?> - <?php echo $data['apeli_jef'];?></td>
+										<td class='text-center'><?php echo $data['obser_reg']; ?></td>
 										<td class='text-center'><?php echo $data['fecre_reg']; ?></td>
 										<td class='text-center'>
 											<a href="registro_ver.php?id=<?php echo $data['ident_reg']; ?>" class="look"><i class="fa fa-eye"></i></a>
 										</td>
-										<td class='text-center'>
+										<!-- <td class='text-center'>
 											<a href="registro_editar.php?id=<?php echo $data['ident_reg']; ?>" class="edit"><i class="fa fa-edit"></i></a>
-										</td>
+										</td> -->
 										<td class='text-center'>
 											<?php  
 												if ($data['nombr_tip'] != 'ADMINISTRADOR') {

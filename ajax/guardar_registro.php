@@ -2,25 +2,26 @@
 
 include "../paginas/conexion.php";
 
-$nombr_reg = $_POST['nombr_reg'];
-$descr_reg = $_POST['descr_reg'];
+$obser_reg = $_POST['obser_reg'];
 $fecre_reg = $_POST['fecre_reg'];
 $statu_reg = 1;
-$ident_ref = 1;
+$ident_jef = $_POST['ident_jef'];
 
 $sqlInsert = "
-        INSERT INTO tab_reg(nombr_reg,descr_reg,fecre_reg,statu_reg) 
-        VALUES ('$nombr_reg', '$descr_reg', '$fecre_reg', '$statu_reg')";       
+        INSERT INTO tab_reg(obser_reg,fecre_reg,statu_reg,ident_jef) 
+        VALUES ('$obser_reg', '$fecre_reg', '$statu_reg','$ident_jef')";       
 
     mysqli_query($conexion, $sqlInsert);
 
+    echo $sqlInsert;
+
     $lastInsertId = mysqli_insert_id($conexion);
-    $jefes = $_POST['ident_jef'];
-    for ($i = 0; $i <= count($_POST['ident_jef']); $i++) {
+    $sintomas = $_POST['ident_sin'];
+    for ($i = 0; $i <= count($_POST['ident_sin']); $i++) {
         
         $sqlInsertItem = "
-        INSERT INTO det_reg(ident_reg, ident_jef) 
-        VALUES ('$lastInsertId', '$jefes[$i]')";            
+        INSERT INTO det_reg(ident_reg, ident_sin) 
+        VALUES ('$lastInsertId', '$sintomas[$i]')";            
         mysqli_query($conexion, $sqlInsertItem);
     }      
 

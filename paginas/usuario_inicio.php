@@ -16,7 +16,7 @@ if (!empty($_SESSION['active'])) {
       $usuar_jef = mysqli_real_escape_string($conexion, $_POST['usuar_jef']);
       $contr_jef = md5(mysqli_real_escape_string($conexion, $_POST['contr_jef']));
 
-      $query = mysqli_query($conexion,"SELECT u.ident_jef,u.cedul_jef,u.nombr_jef,u.apeli_jef,u.fecna_jef,u.telem_jef,u.telec_jef,u.email_jef,u.direc_jef,u.tibom_jef,u.seria_jef,u.usuar_jef,u.contr_jef,u.statu_jef, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE u.usuar_jef = '$usuar_jef' AND u.contr_jef = '$contr_jef'");
+      $query = mysqli_query($conexion,"SELECT u.ident_jef,u.cedul_jef,u.nombr_jef,u.apeli_jef,u.fecna_jef,u.telem_jef,u.telec_jef,u.email_jef,u.direc_jef,u.seria_jef,u.usuar_jef,u.contr_jef,u.statu_jef, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE u.usuar_jef = '$usuar_jef' AND u.contr_jef = '$contr_jef'");
      
       $result = mysqli_num_rows($query);
 
@@ -51,7 +51,6 @@ if (!empty($_SESSION['active'])) {
               $_SESSION['telec_jef'] = $data['telec_jef'];
               $_SESSION['email_jef'] = $data['email_jef'];
               $_SESSION['direc_jef'] = $data['direc_jef'];
-              $_SESSION['tibom_jef'] = $data['tibom_jef'];
               $_SESSION['seria_jef'] = $data['seria_jef'];
               $_SESSION['usuar_jef'] = $data['usuar_jef'];
               $_SESSION['statu_jef'] = $data['statu_jef'];

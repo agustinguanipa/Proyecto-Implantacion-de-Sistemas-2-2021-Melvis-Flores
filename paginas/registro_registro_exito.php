@@ -16,10 +16,10 @@
 			    <b>Registrar Evento</b>
 			  </div>
 		   	<div class="card-body">
-  				<h2><b>¡El Evento ha sido Registrado Exitosamente!</b></h2>
+  				<h2><b>¡El Caso ha sido Registrado Exitosamente!</b></h2>
 				</div>
 				<div class="card-footer">
-           <a href="registro_nuevo.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar otro Evento</a> 
+           <a href="registro_nuevo.php" class="btn btn-info float-left"><i class="fa fa-plus"></i> Registrar otro Caso</a> 
            <a href="registro_lista.php" class="btn btn-primary float-right">Ir al Listado <i class="fa fa-arrow-right"></i></a> 
 				</div>
     </div> 

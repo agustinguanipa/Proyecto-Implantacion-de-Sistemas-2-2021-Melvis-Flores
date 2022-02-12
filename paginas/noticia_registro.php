@@ -42,8 +42,7 @@
               <input type="text" class="form-control" name="desco_not" autocomplete="off" id="desco_not" maxlength="100">
             </div>
           </div>
-          <div class="form-row">        
-            <div class="col form-group">
+          <div class="col form-group">
               <label class="form-label" for="descr_not"><b>Descripción Larga: </b></label>
               <textarea class="form-control" name="descr_not" autocomplete="off" id="descr_not"  maxlength="5000"></textarea>
               <script>
@@ -52,7 +51,6 @@
                 CKEDITOR.replace( 'descr_not' );
               </script>
             </div>
-          </div>
           <div class="form-row">
             <div class="col form-group">
               <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-newspaper"></i> Publicar Noticia</button>

@@ -17,7 +17,7 @@
 							<h2><b>Noticias</b></h2>
 						</div>
 						<div class="col-sm-6">
-							<a href="noticia_lista.php" class="btn btn-light text-dark"><i class="fa fa-users"></i> Noticias Activas</a>
+							<a href="noticia_lista.php" class="btn btn-light text-dark"><i class="fa fa-check"></i> Noticias Activas</a>
 							<a href="noticia_lista_inactivo.php" class="btn btn-light text-dark"><i class="fa fa-trash"></i> Noticias Inactivas</a>
 						</div>
 	        </div>

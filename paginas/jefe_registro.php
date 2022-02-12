@@ -13,7 +13,7 @@
   <div class="form-group text-center">
     <div class="card">
     	<div class="card-header">
-		    <b>Registrar Jefe de Familia</b>
+		    <b>Registrar Persona</b>
 		  </div>
 	   	<div class="card-body">
         <form role="form" id="jefe_registro" class="justify-content-center mx- my-1" align="center" enctype="multipart/form-data" action="../ajax/guardar_jefe.php" method="post">
@@ -54,12 +54,16 @@
               <label class="form-label" for="calle_jef"><b>Calle o Carrera: </b></label>
               <select class="form-control" id="calle_jef" name="calle_jef">
                 <option disabled selected value>Seleccionar una Opción...</option>
-                <option value="AVENIDA ESPANA">AVENIDA ESPANA</option>
-                <option value="AVENIDA UNIVERSIDAD">AVENIDA UNIVERSIDAD</option>
+                <option value="CARRETERA PRINCIPAL">CARRETERA PRINCIPAL</option>
+                <option value="CALLE 1">CALLE 1</option>
                 <option value="CALLE 2">CALLE 2</option>
-                <option value="CARRERA 6">CARRERA 6</option>
-                <option value="CARRERA 7">CARRERA 7</option>
-                <option value="CARRERA 8">CARRERA 8</option>
+                <option value="CALLE 3">CALLE 3</option>
+                <option value="CALLE 4">CALLE 4</option>
+                <option value="CALLE 5">CALLE 5</option>
+                <option value="CALLE 6">CALLE 6</option>
+                <option value="CARRERA 1">CARRERA 1</option>
+                <option value="CARRERA 2">CARRERA 2</option>
+                <option value="CARRERA 3">CARRERA 3</option>
               </select>
             </div>
             <div class="col form-group col-lg-8">
@@ -68,17 +72,6 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="col form-group">
-              <label class="form-label" for="tibom_jef"><b>Tipo de Bombona: </b></label>
-              <select class="form-control" id="tibom_jef" name="tibom_jef">
-                <option disabled selected value>Seleccionar una Opción...</option>
-                <option value="10 KG">10 KG</option>
-                <option value="18 KG">18 KG</option>
-                <option value="27 KG">27 KG</option>
-                <option value="43 KG">43 KG</option>
-                <option value="GRANEL">GRANEL</option>
-              </select>
-            </div>
             <div class="col form-group">
               <label class="form-label" for="seria_jef"><b>Serial del Carnet de la Patria: </b></label>
               <input type="text" class="form-control" name="seria_jef" autocomplete="off" id="seria_jef" maxlength="20">
@@ -152,7 +145,7 @@
           </div> 
           <div class="form-row">
             <div class="col form-group">
-              <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Registrar Jefe de Familia</button>
+              <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Registrar Persona</button>
               <button type="reset" class="btn btn-light btn-block"><i class="fa fa-undo"></i> Limpiar</button>
             </div>
           </div> 
@@ -215,9 +208,6 @@
         required: true
       },
       direc_jef: {
-        required: true
-      },
-      tibom_jef: {
         required: true
       },
       seria_jef: {
@@ -288,9 +278,6 @@
       },
       direc_jef: {
         required: "Ingrese una Dirección"
-      },
-      tibom_jef: {
-        required: "Seleccione una Opcion"
       },
       seria_jef: {
         number: "Ingrese un Serial del Carnet"

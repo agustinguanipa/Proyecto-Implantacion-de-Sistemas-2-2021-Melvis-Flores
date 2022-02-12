@@ -19,7 +19,7 @@ if (empty($_GET['id'])) {
 
 $id = $_GET['id'];
 
-  $query_jef = mysqli_query($conexion,"SELECT u.ident_jef,u.cedul_jef,u.nombr_jef, u.apeli_jef, u.fecna_jef, u.telem_jef, u.telec_jef, u.email_jef, u.calle_jef, u.direc_jef, u.tibom_jef, u.usuar_jef, u.seria_jef, u.ident_tip, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE ident_jef = '$id' AND statu_jef = 1");
+  $query_jef = mysqli_query($conexion,"SELECT u.ident_jef,u.cedul_jef,u.nombr_jef, u.apeli_jef, u.fecna_jef, u.telem_jef, u.telec_jef, u.email_jef, u.calle_jef, u.direc_jef, u.usuar_jef, u.seria_jef, u.ident_tip, r.ident_tip, r.nombr_tip FROM tab_jef u INNER JOIN tab_tip r ON u.ident_tip = r.ident_tip WHERE ident_jef = '$id' AND statu_jef = 1");
   
 $result_jef = mysqli_num_rows($query_jef);
 
@@ -38,7 +38,6 @@ if ($result_jef == 0)
   $email_jef = $data_jef['email_jef'];
   $calle_jef = $data_jef['calle_jef'];
   $direc_jef = $data_jef['direc_jef'];
-  $tibom_jef = $data_jef['tibom_jef'];
   $seria_jef = $data_jef['seria_jef'];
   $usuar_jef = $data_jef['usuar_jef'];
   $ident_tip = $data_jef['ident_tip'];
@@ -51,7 +50,7 @@ mysqli_close($conexion);
   <div class="form-group text-center">
     <div class="card">
     	<div class="card-header">
-			    <b>Editar Jefe de Familia</b>
+			    <b>Editar Persona</b>
 			  </div>
 		   	<div class="card-body">
   				<form role="form" id="jefe_editar" class="justify-content-center mx-3 my-1" align="center" enctype="multipart/form-data" action="../ajax/editar_jefe.php" method="post">
@@ -104,17 +103,6 @@ mysqli_close($conexion);
 		        </div>
             <div class="form-row">
               <div class="col form-group">
-                <label class="form-label" for="tibom_jef"><b>Tipo de Bombona: </b></label>
-                <select class="form-control notItemOne" id="tibom_jef" name="tibom_jef">
-                  <option value="<?php echo $tibom_jef;?>"><?php echo $tibom_jef;?></option>
-                  <option value="10 KG">10 KG</option>
-                  <option value="18 KG">18 KG</option>
-                  <option value="27 KG">27 KG</option>
-                  <option value="43 KG">43 KG</option>
-                  <option value="GRANEL">GRANEL</option>
-                </select>
-              </div>
-              <div class="col form-group">
                 <label class="form-label" for="seria_jef"><b>Serial del Carnet de la Patria: </b></label>
                 <input type="text" class="form-control" name="seria_jef" autocomplete="off" id="seria_jef" value="<?php echo $seria_jef; ?>" maxlength="20">
               </div>
@@ -156,7 +144,7 @@ mysqli_close($conexion);
             </div> 
 		        <div class="form-row">
 		          <div class="col form-group">
-		            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Actualizar Jefe de Familia</button>
+		            <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Actualizar Persona</button>
 		            <button type="reset" class="btn btn-light btn-block"><i class="fa fa-undo"></i> Limpiar</button>
 		          </div>
 		        </div>

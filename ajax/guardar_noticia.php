@@ -16,7 +16,7 @@
 	$type = $foto['type'];
 	$url_temp = $foto['tmp_name'];
 
-	$imgNoticia = 'default.png';
+	$imgNoticia = 'default.jpg';
 
 	if ($nombre_foto != '')
 	{
@@ -26,7 +26,7 @@
 		$src = $destino.$imgNoticia;
 	}
 
-		$query_insert = mysqli_query($conexion,"INSERT INTO tab_not(titul_not,desco_not,descr_not,image_not,statu_not,ident_jef) VALUES('$titul_not','$desco_not','$descr_not','$imgNoticia','$statu_not','$ident_jef')");
+		$query_insert = mysqli_query($conexion,"INSERT INTO tab_not(titul_not,desco_not,descr_not,image_not,statu_not) VALUES('$titul_not','$desco_not','$descr_not','$imgNoticia','$statu_not')");
 
 		if ($query_insert) {
 			if ($nombre_foto != '') 
